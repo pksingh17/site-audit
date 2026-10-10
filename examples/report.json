@@ -1,0 +1,7 @@
+{"title":"Website audit — sample","subtitle":"SEO, AI-answer readiness and content risk","prepared_by":"Pk Singh","prepared_for":"Sample client","date":"2026-10-09","evidence_date":"2026-10-08","ban_dashes":true,
+"summary":["Both sites sit in the at-risk band. The fastest lift is template work — bylines, author pages and linked sources — worth about 10 points on alpha-summit.com.","Blue Panda's score is provisional: robots rules blocked the fetch tool, and PageSpeed is still awaited."],
+"method":"Evidence gathered 6–8 October from homepages, listing pages and one article per site, confirmed by second-pass fetches.",
+"sections":[{"heading":"Brand collision","paragraphs":["A namesake agency in another country dominates the bare brand query. Brand plus city returns the client first."],"table":[["Query","Namesake","Strength"],["blue panda digital marketing","Blue Panda (Nebraska)","dominant"],["blue panda vadodara","none","n/a"]]}],
+"fix_list":[{"item":"Add city and category to the homepage title and H1","owner":"Web","criterion":"G"},{"item":"Add bylines and author pages","owner":"Editorial","criterion":"D"}],
+"limits":["Structured data verified only where page source was pasted.","Duplicate scan covers listing page 1 only."],
+"references":[{"title":"Google spam policies","url":"https://developers.google.com/search/docs/essentials/spam-policies","updated":"2026-09-xx (sample)"}]}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pdf
+scored*.json
+delta.json
+.DS_Store

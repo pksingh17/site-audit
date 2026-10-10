@@ -1,0 +1,10 @@
+{
+  "name": "site-audit",
+  "version": "2.1.0",
+  "description": "Evidence-first website audits for SEO, AI-answer (AEO) readiness and content risk, with a fixed rubric, bundled scripts and a client-ready PDF.",
+  "author": { "name": "Prabhakar Singh" },
+  "homepage": "https://github.com/pksingh17/site-audit",
+  "repository": "https://github.com/pksingh17/site-audit",
+  "license": "MIT",
+  "keywords": ["seo", "aeo", "audit", "ai-overviews", "content-risk"]
+}

@@ -1,0 +1,38 @@
+{
+  "rubric_version": "2.1",
+  "run_date": "YYYY-MM-DD",
+  "defaults_stated": ["listing page 1 only", "one article per site", "group by site"],
+  "policies": [
+    {"title": "Google spam policies", "url": "https://developers.google.com/search/docs/essentials/spam-policies", "updated": "", "quote": ""}
+  ],
+  "sites": [
+    {
+      "site": "example.com",
+      "type": "publisher",
+      "owner": "",
+      "fetch_blocked": false,
+      "brand_collision": {
+        "queries": ["brand", "brand city", "brand category"],
+        "namesakes": [{"name": "", "domain": "", "location": "", "strength": "dominant|present|minor"}],
+        "separating_signals": []
+      },
+      "evidence": [
+        {"check": "byline", "finding": "none on sampled article", "proof": "URL plus quoted line", "origin": "verified live|search index|user-supplied|estimate"}
+      ],
+      "scores": {
+        "A": {"raw": null, "proof": "", "na": null},
+        "B": {"raw": null, "proof": "", "na": null},
+        "C": {"raw": null, "proof": "", "na": null},
+        "D": {"raw": null, "proof": "", "na": null},
+        "E": {"raw": null, "proof": "", "na": null},
+        "F": {"raw": null, "proof": "", "na": null},
+        "G": {"raw": null, "proof": "", "na": null},
+        "H": {"raw": null, "proof": "", "na": null},
+        "I": {"raw": null, "proof": "", "na": null}
+      },
+      "fixes": [
+        {"criterion": "D", "to": 8, "fix": "add bylines and author pages"}
+      ]
+    }
+  ]
+}

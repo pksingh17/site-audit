@@ -1,0 +1,17 @@
+{
+  "name": "site-audit",
+  "owner": {
+    "name": "Prabhakar Singh"
+  },
+  "plugins": [
+    {
+      "name": "site-audit",
+      "source": "./",
+      "description": "Evidence-first website audits for SEO, AI-answer (AEO) readiness and content risk.",
+      "version": "2.1.0"
+    }
+  ],
+  "metadata": {
+    "description": "site-audit: evidence-first SEO, AEO and content-risk audits for any website or network of sites."
+  }
+}
