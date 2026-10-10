@@ -1,6 +1,6 @@
 # Fetching: tools, traps and fallbacks
 
-Tool names are generic: "the fetch tool" is whatever reads a web page in this session (WebFetch, a browser, a fetch connector); "search" is the web search tool; "the shell" is a code sandbox or a linked desktop terminal.
+Tool names are generic, so the skill runs the same in Claude, ChatGPT and Codex: "the fetch tool" is whatever reads a web page in this session (WebFetch in Claude, web browsing in ChatGPT, a browser or fetch connector); "search" is the web search tool; "the shell" is a code sandbox (Claude code execution, ChatGPT's Python tool, a Codex or Claude Code terminal, a linked desktop).
 
 ## Order of preference
 1. **Shell fetch** with `scripts/fetch_source.py URL` when the shell has open network. Real HTML: canonical, meta robots, H1s, hreflang, OG tags, JSON-LD, redirect chain, contact links. This is the only route that verifies structured data.

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "site-audit",
+  "version": "2.1.0",
+  "description": "Evidence-first website audits for SEO, AI-answer (AEO) readiness and content risk, with a fixed rubric, bundled scripts and a client-ready PDF. No proof, no score.",
+  "author": { "name": "Prabhakar Singh", "url": "https://github.com/pksingh17" },
+  "homepage": "https://github.com/pksingh17/site-audit",
+  "repository": "https://github.com/pksingh17/site-audit",
+  "license": "MIT",
+  "keywords": ["seo", "aeo", "audit", "ai-overviews", "content-risk"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Site Audit",
+        "shortDescription": "Evidence-first SEO and AEO audits. No proof, no score.",
+        "longDescription": "Audit one website or a network of sites for SEO, AI-answer readiness and content risk. Fixed 9-criterion rubric weighted by site type, AI-bot robots checks, cross-domain duplicate detection, brand collision check, progress tracking between audits and a client-ready PDF. Free sources first; Ahrefs and Semrush optional.",
+        "developerName": "Prabhakar Singh",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/pksingh17/site-audit",
+        "defaultPrompt": "Run a quick site audit on "
+      }
+    }
+  }
+}

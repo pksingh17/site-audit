@@ -1,6 +1,8 @@
 # site-audit
 
-Evidence-first website audits for Claude: SEO, AI-answer (AEO) readiness and content risk, for one site or a whole network of sites.
+Evidence-first website audits for SEO, AI-answer (AEO) readiness and content risk, for one site or a whole network of sites.
+
+One skill for **Claude** and **ChatGPT / Codex**. It follows the open [Agent Skills](https://agentskills.io) standard both platforms use, so the same `skills/site-audit/` folder runs everywhere. The repo ships native plugin manifests for each side.
 
 Every score, finding and claim carries proof: a quoted line, a URL, a date. If there's no proof, there's no score. Free sources come first. Paid SEO tools (Ahrefs, Semrush) are optional add-ons, never a requirement.
 
@@ -54,15 +56,42 @@ Requirements: Python 3.9+. `fetch_source.py` needs `beautifulsoup4` and `request
 
 ## Install
 
+### Claude
+
 **Claude Code**
 ```
 /plugin marketplace add pksingh17/site-audit
 /plugin install site-audit@site-audit
 ```
 
-**Claude apps (web, desktop)**
+**Claude apps (web, desktop):** download `site-audit-v2.1.skill` from the latest release (or zip `skills/site-audit/`) and upload it in your skills settings.
 
-Download the `.skill` file from the latest release, or zip `skills/site-audit/`, then upload it in your skills settings.
+### ChatGPT and Codex
+
+**Codex CLI and the ChatGPT desktop app (as a plugin)**
+```
+codex plugin marketplace add pksingh17/site-audit
+codex plugin add site-audit@site-audit
+```
+Plugin skills also show up in ChatGPT Chat and Work on web, desktop and mobile.
+
+**Standalone skill (ChatGPT desktop app, Codex CLI, IDE extension):** copy `skills/site-audit/` to `~/.agents/skills/site-audit/` for every project, or to `.agents/skills/site-audit/` inside one repo. Restart the app, then find it under **Skills** in the sidebar or call it with `$site-audit`.
+
+### Any other Agent Skills tool
+
+Point it at `skills/site-audit/`. The skill needs only a `SKILL.md`-aware agent; the scripts need Python.
+
+## How the repo is laid out
+
+| Path | Read by |
+|---|---|
+| `skills/site-audit/` | Every platform: the skill itself |
+| `skills/site-audit/agents/openai.yaml` | ChatGPT and Codex: display name and default prompt |
+| `plugin.json` | Codex and ChatGPT plugins (portable manifest) |
+| `.agents/plugins/marketplace.json` | `codex plugin marketplace add` |
+| `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json` | `/plugin marketplace add` in Claude Code |
+
+Tool names inside the skill are generic ("the fetch tool", "the shell"), so the same instructions map onto WebFetch in Claude and browsing in ChatGPT. Surfaces that can't run code still follow the rubric, show the arithmetic, and flag that the totals weren't checked by `score.py`.
 
 ## Test
 
@@ -74,7 +103,7 @@ The tests run every script against the files in `examples/`, including deliberat
 
 ## Changelog
 
-- **2.1.0**: Added the fetch fallback ladder (search index, pasted robots.txt, pasted page source), `robots_check.py`, the brand collision check and the entity-clarity points under G. Delta now reports a like-for-like change when coverage shifts.
+- **2.1.0**: Cross-platform release for Claude, ChatGPT and Codex, with native plugin manifests for both ecosystems. Added the fetch fallback ladder (search index, pasted robots.txt, pasted page source), `robots_check.py`, the brand collision check and the entity-clarity points under G. Delta now reports a like-for-like change when coverage shifts.
 - **2.0.0**: Split the skill into a router plus references. Added fixed 0 to 10 ladders, site-type weights, criterion I, N/A and coverage handling, and the Quick, Delta and Handoff modes. Bundled scripts.
 - **1.0.0**: First release, built around an event-network audit.
 

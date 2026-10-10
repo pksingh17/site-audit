@@ -26,6 +26,8 @@ Evidence-first audit of one website or a network of websites against Google Sear
 
 Run scripts with `python3 scripts/NAME.py --help` for arguments. They need only the Python standard library plus `beautifulsoup4` (fetch_source) and `reportlab`, `pypdf` (report). Install missing ones with pip.
 
+Works in any agent that supports the Agent Skills standard (Claude, ChatGPT, Codex). If the session has no code tool at all, still follow the rubric exactly, show the arithmetic for every total line by line, and mark the result "computed without score.py" so the reader knows it was not machine-checked.
+
 ## Modes
 
 | Mode | Trigger | Output |

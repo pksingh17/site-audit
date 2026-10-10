@@ -1,0 +1,7 @@
+interface:
+  display_name: "Site Audit"
+  short_description: "Evidence-first SEO and AEO audits. No proof, no score."
+  default_prompt: "Run a quick site audit on "
+
+policy:
+  allow_implicit_invocation: true
